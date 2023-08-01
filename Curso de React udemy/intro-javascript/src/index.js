@@ -1,45 +1,33 @@
 
+//Desectructuracion de arreglos
 
-// Funciones en JS
+const personajes = ['Goku', 'Vegeta', 'Trunks'];
+const [ , , p3 ] = personajes;
+console.log(p3)
 
-const saludar = function( nombre ){
-  return `Hola, ${nombre}`;
-}//se aconseja manejar funciones como constantes porque es posible canbiar el valor de la funcion si no se declara como constante...
-
-const saludar2 = ( nombre ) => {
-  return `Hola, ${nombre}`;
-}//ventaja de la fleja es quie si solo tiene solo 1 return es que se puede simplificar
-
-const saludar3 = nombre => `Hola, ${nombre}`;
-
-console.log(saludar);
-console.log(saludar2);
-console.log(saludar3);
-
-console.log(saludar("Jose"));
-console.log(saludar("Daniel"));
-console.log(saludar("Fabra"));
+// console.log(personajes[0]);
+// console.log(personajes[1]);
+// console.log(personajes[2]);
 
 
-const gerUser = ()=>({
-  uid: "ABC123",
-  username: "El_papi102"
-});
 
 
-console.log( gerUser() );
-
-//Tarea
-// 1. Transformen a una funcion de flecha
-//2. tiene que retornar un obj implicito
-//3. probar
-
-function GetUserActivo ( nombre ){
-  return {
-    uid: "ABC567",
-    username: nombre
-  }
+const retornaArreglo  = () => {
+  return ['ABC', 123];
 }
 
-const usuarioActivo = GetUserActivo("Andrea");
-console.log( usuarioActivo );
+const [letras, numeros] = retornaArreglo();
+console.log(letras, numeros);
+
+
+//Tarea
+// 1. el primer valor de arr se llamara nombre
+// 2. se llamara losnombre
+const State = ( valor ) =>{
+  return[valor, ()=>{console.log('Hola Mundo')}];
+}
+
+const arr =   State('Cualquier cosa');
+
+console.log(nombre);
+losnombre();
